@@ -1,0 +1,19 @@
+<h1><em>Time Cards</em></h1>
+
+
+{% if latest_entry %}
+
+<ul>
+    {% for Timesheet in latest_entry %}
+    <li><h3>{{ Timesheet.name }}</h3></li>
+    <li><h2>{{ Timesheet.school }}</h2></li>
+    <li>{{ Timesheet.subject }}</li>
+    <li>{{ Timesheet.dateOfWork }}</li>
+    <li>{{ Timesheet.dateOfEntry }}</li>
+    <hr/>
+
+    {% endfor %}
+</ul>
+{% else %}
+<p>No entries are available.</p>
+{% endif %}
